@@ -20,6 +20,9 @@
     <None Include="DXUT\Optional\directx.ico">
       <Filter>DXUT</Filter>
     </None>
+    <None Include="Render.fx">
+      <Filter>Shaders</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="EmptyProject.cpp" />
@@ -68,6 +71,7 @@
     <ClCompile Include="engine\SpotLight.cpp">
       <Filter>engine</Filter>
     </ClCompile>
+    <ClCompile Include="Scene.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="DXUT\Core\DXUT.h">
@@ -124,6 +128,7 @@
     <ClInclude Include="engine\emptyscene.h">
       <Filter>engine</Filter>
     </ClInclude>
+    <ClInclude Include="Scene.h" />
   </ItemGroup>
   <ItemGroup>
     <CLInclude Include="resource.h">
@@ -132,7 +137,5 @@
     <ResourceCompile Include="EmptyProject.rc">
       <Filter>Resource Files</Filter>
     </ResourceCompile>
-  </ItemGroup>
-  <ItemGroup>
   </ItemGroup>
 </Project>

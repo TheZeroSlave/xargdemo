@@ -402,6 +402,7 @@
     <ClCompile Include="engine\Frustum.cpp" />
     <ClCompile Include="engine\Sphere.cpp" />
     <ClCompile Include="engine\SpotLight.cpp" />
+    <ClCompile Include="Scene.cpp" />
     <ClInclude Include="DXUT\Core\DXUT.h" />
     <ClInclude Include="DXUT\Core\DXUTenum.h" />
     <ClInclude Include="DXUT\Core\DXUTmisc.h" />
@@ -420,18 +421,20 @@
     <ClInclude Include="engine\Sphere.h" />
     <ClInclude Include="engine\SpotLight.h" />
     <ClInclude Include="engine\types.h" />
+    <ClInclude Include="Scene.h" />
     <None Include="DXUT\Optional\directx.ico" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="EmptyProject.cpp" />
   </ItemGroup>
   <ItemGroup>
-  </ItemGroup>
-  <ItemGroup>
     <CLInclude Include="resource.h" />
     <ResourceCompile Include="EmptyProject.rc" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Render.fx">
+      <FileType>Document</FileType>
+    </None>
   </ItemGroup>
   <ItemGroup>
   </ItemGroup>

@@ -13,7 +13,7 @@
 #include "engine/types.h"
 #include "Scene.h"
 
-EmptyScene g_scene;
+Scene g_scene;
 
 #pragma warning(disable: 4238)
 
