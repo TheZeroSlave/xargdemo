@@ -17,16 +17,12 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Render.fx">
-      <Filter>Shaders</Filter>
-    </None>
     <None Include="DXUT\Optional\directx.ico">
       <Filter>DXUT</Filter>
     </None>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="EmptyProject.cpp" />
-    <ClCompile Include="Scene.cpp" />
     <ClCompile Include="DXUT\Core\DXUT.cpp">
       <Filter>DXUT</Filter>
     </ClCompile>
@@ -74,7 +70,6 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Scene.h" />
     <ClInclude Include="DXUT\Core\DXUT.h">
       <Filter>DXUT</Filter>
     </ClInclude>
