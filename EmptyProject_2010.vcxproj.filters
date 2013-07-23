@@ -68,6 +68,7 @@
     <ClCompile Include="engine\SpotLight.cpp">
       <Filter>engine</Filter>
     </ClCompile>
+    <ClCompile Include="demo.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="DXUT\Core\DXUT.h">
@@ -124,6 +125,7 @@
     <ClInclude Include="engine\emptyscene.h">
       <Filter>engine</Filter>
     </ClInclude>
+    <ClInclude Include="demo.h" />
   </ItemGroup>
   <ItemGroup>
     <CLInclude Include="resource.h">

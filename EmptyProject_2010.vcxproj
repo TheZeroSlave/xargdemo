@@ -384,6 +384,7 @@
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="demo.cpp" />
     <ClCompile Include="DXUT\Core\DXUT.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
@@ -402,6 +403,7 @@
     <ClCompile Include="engine\Frustum.cpp" />
     <ClCompile Include="engine\Sphere.cpp" />
     <ClCompile Include="engine\SpotLight.cpp" />
+    <ClInclude Include="demo.h" />
     <ClInclude Include="DXUT\Core\DXUT.h" />
     <ClInclude Include="DXUT\Core\DXUTenum.h" />
     <ClInclude Include="DXUT\Core\DXUTmisc.h" />

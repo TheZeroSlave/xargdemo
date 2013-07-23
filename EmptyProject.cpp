@@ -11,9 +11,9 @@
 #include "resource.h"
 #include "engine/Sphere.h"
 #include "engine/types.h"
-#include "Scene.h"
+#include "demo.h"
 
-EmptyScene g_scene;
+DemoScene g_scene;
 
 #pragma warning(disable: 4238)
 
