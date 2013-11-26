@@ -56,7 +56,6 @@ ID3DXMesh* GenerateSphere(IDirect3DDevice9* device, float radius, UINT rings, UI
             SphereVertex* vertex = vertexes++;
 
             vertex->pos = Vec3(x, y, z) * radius;
-            vertex->pos *= radius;
             //
             D3DXVec3Normalize(&vertex->normal, &vertex->pos);
             vertex->tex = Vec2(sector / (float)(sectors - 1.0f),
@@ -72,6 +71,76 @@ ID3DXMesh* GenerateSphere(IDirect3DDevice9* device, float radius, UINT rings, UI
             DWORD v1 = ring * sectors + sector + 1;
             DWORD v2 = (ring + 1) * sectors + sector;
             DWORD v3 = (ring + 1) * sectors + sector + 1;
+
+            *indexes++ = v0;
+            *indexes++ = v1;
+            *indexes++ = v2;
+
+            *indexes++ = v2;
+            *indexes++ = v1;
+            *indexes++ = v3;
+        }
+    }
+
+    mesh->UnlockIndexBuffer();
+    mesh->UnlockVertexBuffer();
+    return mesh;
+}
+
+Mesh* GenerateCylinder(IDirect3DDevice9* device, float radius, float height, UINT sectors)
+{
+    if (!device)
+	{
+		return 0;
+	}
+	const DWORD numVertexes = 2 * (sectors + 1);
+	const DWORD numFaces = 2 * sectors;
+    
+    ID3DXMesh* mesh = 0;
+
+    HRESULT hr = D3DXCreateMeshFVF(numFaces,
+                      numVertexes,
+                      D3DXMESH_32BIT | D3DXMESH_VB_WRITEONLY | D3DXMESH_IB_WRITEONLY,
+                      D3DFVF_XYZ | D3DFVF_NORMAL | D3DFVF_TEX1,
+                      device,
+                      &mesh);
+    if (FAILED(hr))
+    {
+        MessageBox(0, L"Unable to generate sphere", L"Application error", MB_ICONSTOP);
+        return 0;
+    }
+    SphereVertex* vertexes = 0;
+    DWORD* indexes = 0;
+
+    mesh->LockVertexBuffer(0, (void**)&vertexes);
+    mesh->LockIndexBuffer(0, (void**)&indexes);
+
+    const UINT rings = 1;
+    //
+    for (UINT ring = 0; ring < rings + 1; ring++)
+    {
+        for (UINT sector = 0; sector < sectors + 1; sector++)
+        {
+            const float z = sinf(sector * D3DX_PI * 2.f / sectors) * radius;
+            const float x = cosf(sector * D3DX_PI * 2.f / sectors) * radius ;
+            const float y = height * (1.0f - (ring / rings));
+
+            SphereVertex* vertex = vertexes++;
+            vertex->pos = Vec3(x, y, z);
+            vertex->normal = Vec3(x, 0, z);
+            vertex->tex = Vec2((FLOAT)sector / (sectors - 1), (FLOAT)ring / rings );
+        }
+    }
+
+    //
+    for (UINT ring = 0; ring < rings; ++ring)
+    {
+        for (UINT sector = 0; sector < sectors; ++sector)
+        {
+            DWORD v0 = (ring * (sectors + 1) + sector);
+            DWORD v1 = (ring * (sectors + 1) + sector + 1);
+            DWORD v2 = ((ring + 1) * (sectors + 1) + sector);
+            DWORD v3 = ((ring + 1) * (sectors + 1) + sector + 1);
 
             *indexes++ = v0;
             *indexes++ = v1;

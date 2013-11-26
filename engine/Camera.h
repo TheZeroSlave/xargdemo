@@ -1,7 +1,11 @@
 #pragma once
 #include "types.h"
 
-class FpsCamera
+class Camera
+{
+};
+
+class FpsCamera : public Camera
 {
 public:
     enum Direction

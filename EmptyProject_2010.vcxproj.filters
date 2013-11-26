@@ -69,6 +69,16 @@
       <Filter>engine</Filter>
     </ClCompile>
     <ClCompile Include="demo.cpp" />
+    <ClCompile Include="SpaceBackground.cpp" />
+    <ClCompile Include="engine\utils.cpp">
+      <Filter>engine</Filter>
+    </ClCompile>
+    <ClCompile Include="Ship.cpp" />
+    <ClCompile Include="SceneEffect.cpp" />
+    <ClCompile Include="engine\SceneCamera.cpp">
+      <Filter>engine</Filter>
+    </ClCompile>
+    <ClCompile Include="Stars.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="DXUT\Core\DXUT.h">
@@ -126,6 +136,27 @@
       <Filter>engine</Filter>
     </ClInclude>
     <ClInclude Include="demo.h" />
+    <ClInclude Include="SpaceBackground.h" />
+    <ClInclude Include="engine\DeviceObject.h">
+      <Filter>engine</Filter>
+    </ClInclude>
+    <ClInclude Include="engine\SceneObject.h">
+      <Filter>engine</Filter>
+    </ClInclude>
+    <ClInclude Include="engine\utils.h">
+      <Filter>engine</Filter>
+    </ClInclude>
+    <ClInclude Include="Ship.h" />
+    <ClInclude Include="SceneEffect.h" />
+    <ClInclude Include="engine\SceneCamera.h">
+      <Filter>engine</Filter>
+    </ClInclude>
+    <ClInclude Include="SpaceObject.h" />
+    <ClInclude Include="Stars.h" />
+    <ClInclude Include="engine\EffectManager.h">
+      <Filter>engine</Filter>
+    </ClInclude>
+    <ClInclude Include="EngineFacade.h" />
   </ItemGroup>
   <ItemGroup>
     <CLInclude Include="resource.h">
@@ -134,7 +165,5 @@
     <ResourceCompile Include="EmptyProject.rc">
       <Filter>Resource Files</Filter>
     </ResourceCompile>
-  </ItemGroup>
-  <ItemGroup>
   </ItemGroup>
 </Project>

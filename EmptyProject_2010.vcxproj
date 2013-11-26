@@ -401,8 +401,14 @@
     <ClCompile Include="DXUT\Optional\SDKwavefile.cpp" />
     <ClCompile Include="engine\Camera.cpp" />
     <ClCompile Include="engine\Frustum.cpp" />
+    <ClCompile Include="engine\SceneCamera.cpp" />
     <ClCompile Include="engine\Sphere.cpp" />
     <ClCompile Include="engine\SpotLight.cpp" />
+    <ClCompile Include="engine\utils.cpp" />
+    <ClCompile Include="SceneEffect.cpp" />
+    <ClCompile Include="Ship.cpp" />
+    <ClCompile Include="SpaceBackground.cpp" />
+    <ClCompile Include="Stars.cpp" />
     <ClInclude Include="demo.h" />
     <ClInclude Include="DXUT\Core\DXUT.h" />
     <ClInclude Include="DXUT\Core\DXUTenum.h" />
@@ -416,18 +422,27 @@
     <ClInclude Include="DXUT\Optional\SDKmesh.h" />
     <ClInclude Include="DXUT\Optional\SDKmisc.h" />
     <ClInclude Include="DXUT\Optional\SDKwavefile.h" />
+    <ClInclude Include="EngineFacade.h" />
     <ClInclude Include="engine\Camera.h" />
+    <ClInclude Include="engine\DeviceObject.h" />
+    <ClInclude Include="engine\EffectManager.h" />
     <ClInclude Include="engine\emptyscene.h" />
     <ClInclude Include="engine\Frustum.h" />
+    <ClInclude Include="engine\SceneCamera.h" />
+    <ClInclude Include="engine\SceneObject.h" />
     <ClInclude Include="engine\Sphere.h" />
     <ClInclude Include="engine\SpotLight.h" />
     <ClInclude Include="engine\types.h" />
+    <ClInclude Include="engine\utils.h" />
+    <ClInclude Include="SceneEffect.h" />
+    <ClInclude Include="Ship.h" />
+    <ClInclude Include="SpaceBackground.h" />
+    <ClInclude Include="SpaceObject.h" />
+    <ClInclude Include="Stars.h" />
     <None Include="DXUT\Optional\directx.ico" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="EmptyProject.cpp" />
-  </ItemGroup>
-  <ItemGroup>
   </ItemGroup>
   <ItemGroup>
     <CLInclude Include="resource.h" />
